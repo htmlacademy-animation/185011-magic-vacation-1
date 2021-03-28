@@ -21,7 +21,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -40,7 +40,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition-duration: 100ms;
+    transition-duration: 200ms;
   }
 
   svg {
@@ -175,7 +175,7 @@
   border: 2px solid transparent;
   border-radius: 50%;
   opacity: 0;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -227,7 +227,7 @@
   }
 
   &--insta {
-    transition-delay: 100ms;
+    transition-delay: 200ms;
     svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -240,7 +240,7 @@
   }
 
   &--vk {
-    transition-delay: 200ms;
+    transition-delay: 400ms;
     svg {
       width: 1.7rem;
       height: 1rem;
