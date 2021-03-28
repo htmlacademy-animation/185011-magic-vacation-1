@@ -1315,16 +1315,15 @@ img {
       opacity: 1;
       pointer-events: auto; } }
 
-@keyframes formField {
-  from {
-    width: 0; } }
+.active .form__field {
+  width: calc(100% - 21rem); }
 
 .form__field {
   flex: none;
   margin-right: 3rem;
   padding: 0 5.6rem;
   height: 6rem;
-  width: calc(100% - 21rem);
+  width: 0;
   text-transform: uppercase;
   font: inherit;
   font-size: 2.4rem;
@@ -1333,7 +1332,7 @@ img {
   border: 0;
   border-radius: 3rem;
   outline: none;
-  animation: formField 500ms; }
+  transition: 500ms; }
   .form__field:focus {
     border: 1px solid #a67ee5; }
   @media (min-width: 2000px) {
@@ -1363,7 +1362,8 @@ img {
       font-size: 1.6rem; } }
 
 .form__button {
-  width: 18rem; }
+  width: 18rem;
+  flex-shrink: 0; }
   @media (orientation: portrait) {
     .form__button {
       position: relative;
@@ -1591,10 +1591,9 @@ img {
     .intro__info {
       display: none; } }
 
-@keyframes introMessageFadeId {
-  to {
-    opacity: 1;
-    transform: translateY(0); } }
+.active .intro__message {
+  opacity: 1;
+  transform: translateX(0); }
 
 .intro__message {
   flex: none;
@@ -1605,10 +1604,9 @@ img {
   line-height: 1.27;
   opacity: 0;
   transform: translateY(50px);
-  animation-name: introMessageFadeId;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards; }
+  transition: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out; }
   @media (min-width: 2000px) {
     .intro__message {
       width: 509px;
@@ -1883,7 +1881,7 @@ img {
       height: 2px;
       background-color: #ffffff;
       right: 0;
-      transition: width 100ms ease-out; }
+      transition: width 200ms ease-out; }
       @media (max-width: 1024px) and (orientation: portrait) {
         .page-header__menu a::after {
           left: 0;
@@ -3132,8 +3130,8 @@ img {
         height: 0.4rem;
         background-color: #ffffff; } }
 
-.swiper-slide-active .slider__item-text,
-.swiper-slide-next .slider__item-text {
+.active .swiper-slide-active .slider__item-text,
+.active .swiper-slide-next .slider__item-text {
   transform: translateX(0);
   opacity: 1; }
 
@@ -3158,7 +3156,7 @@ img {
   height: 4rem;
   color: #5f458c;
   border-radius: 50%;
-  transition-duration: 100ms; }
+  transition-duration: 200ms; }
   .social-block__toggler:focus {
     outline: none; }
   @media (max-width: 1024px) and (orientation: portrait) {
@@ -3179,7 +3177,7 @@ img {
     background-color: #ffffff;
     border: 2px solid #ffffff;
     z-index: -1;
-    transition-duration: 100ms; }
+    transition-duration: 200ms; }
   .social-block__toggler svg {
     position: absolute;
     top: 50%;
@@ -3283,7 +3281,7 @@ img {
   border: 2px solid transparent;
   border-radius: 50%;
   opacity: 0;
-  transition-duration: 100ms; }
+  transition-duration: 200ms; }
   @media (min-width: 2000px) {
     .social-block__link {
       width: 40px;
@@ -3320,7 +3318,7 @@ img {
         width: 8px;
         height: 17px; } }
   .social-block__link--insta {
-    transition-delay: 100ms; }
+    transition-delay: 200ms; }
     .social-block__link--insta svg {
       width: 1.5rem;
       height: 1.5rem; }
@@ -3329,7 +3327,7 @@ img {
           width: 15px;
           height: 15px; } }
   .social-block__link--vk {
-    transition-delay: 200ms; }
+    transition-delay: 400ms; }
     .social-block__link--vk svg {
       width: 1.7rem;
       height: 1rem; }
