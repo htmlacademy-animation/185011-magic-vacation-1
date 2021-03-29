@@ -32,6 +32,23 @@
 
 .active .form__field {
   width: calc(100% - 21rem);
+
+  @media (min-width: $stop-scaling) {
+    width: calc(100% - 210px);
+  }
+
+  @media (orientation: portrait) {
+    width: calc(100% - 5rem);
+  }
+
+  @media (max-width: $tablet) and (orientation: landscape) {
+    width: calc(100% - 9rem);
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    width: calc(100% - 5rem);
+  }
+
 }
 
 .form__field {
@@ -59,7 +76,6 @@
     margin-right: 30px;
     padding: 0 56px;
     height: 60px;
-    width: calc(100% - 210px);
     font-size: 24px;
     border-radius: 30px;
   }
@@ -67,19 +83,13 @@
   @media (orientation: portrait) {
     margin-right: 1rem;
     padding: 0 2.5rem;
-    width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
-  }
-
-  @media (max-width: $tablet) and (orientation: landscape) {
-    width: calc(100% - 9rem);
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
     margin-right: 1rem;
     padding: 0 2.5rem;
-    width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
   }
@@ -88,6 +98,10 @@
 .form__button {
   width: 18rem;
   flex-shrink: 0;
+
+  @media (min-width: $stop-scaling) {
+    width: 180px;
+  }
 
   @media (orientation: portrait) {
     position: relative;
