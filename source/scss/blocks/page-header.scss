@@ -27,6 +27,11 @@
   justify-content: space-between;
 }
 
+.loaded .page-header__logo{
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .page-header__logo {
   @include hover;
   position: relative;
@@ -36,6 +41,9 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: transform 300ms cubic-bezier(0, 0, 0.5, 0.85);
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -128,9 +136,15 @@
   }
 }
 
+.loaded .page-header__nav {
+  opacity: 1;
+}
+
 .page-header__nav {
+  opacity: 0;
   display: flex;
   align-items: center;
+  transition: opacity 300ms cubic-bezier(0, 0, 0.5, 0.85);
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
